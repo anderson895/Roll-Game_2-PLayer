@@ -119,12 +119,12 @@ public class RollingDiceGui extends JFrame {
         // Update the score display
         scoreLabel.setText("Player 1: " + player1Score + "   Player 2: " + player2Score);
 
-        // If it's Player 1's turn again, show the result
+        // Update the title label to reflect the next player's turn
         if (currentPlayer == 1) {
-            showResult();
+            titleLabel.setText("Player 1's Turn");
+            showResult(); // Check if the game is over and show the result
         } else {
-            // Update the title label to reflect the next player's turn
-            titleLabel.setText("Player " + currentPlayer + "'s Turn");
+            titleLabel.setText("Player 2's Turn");
         }
         
         rollButton.setEnabled(true);
